@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,
+            //スクロール方向を逆転,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -88,8 +88,8 @@
             bindings = <
 &kp Q          &kp W         &kp E               &kp R                      &kp T                                               &kp Y      &kp U  &kp I          &kp O    &kp P
 &kp A          &kp S         &kp D               &kp F                      &kp G                                               &kp H      &kp J  &kp K          &kp L    &kp MINUS
-&kp Z          &kp X         &kp C               &kp V                      &kp B                                               &kp N      &kp M  &kp COMMA      &kp DOT  &lt 3 SLASH
-&mt LCTRL ESC  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mt LEFT_SHIFT LANGUAGE_2  &lt 2 LS(SPACE)  &lt 1 LANGUAGE_1    &kp BACKSPACE  &kp ENTER         &kp RIGHT_ALT  &kp TAB  &lt 6 DELETE
+&kp Z          &kp X         &kp C               &kp V                      &kp B                                               &kp N      &kp M  &kp COMMA      &kp DOT  &lt 6 SLASH
+&mt LCTRL ESC  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mt LEFT_SHIFT LANGUAGE_2  &lt 2 LS(SPACE)  &lt 1 LANGUAGE_1    &kp BACKSPACE  &kp ENTER         &kp RIGHT_ALT  &kp TAB  &lt 0 DELETE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -106,21 +106,21 @@
 
         MARK {
             bindings = <
-&kp C_MUTE       &kp LS(N7)          &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &kp LS(EQUAL)                    &kp F10            &kp F7   &kp F8    &kp F9    &kp PAGE_UP
-&kp TAB          &kp LS(NUMBER_4)    &kp LS(N5)              &kp LS(NUMBER_6)         &kp LS(N8)                       &kp RIGHT_BRACKET  &kp F4   &kp F5    &kp F6    &kp PAGE_DOWN
-&kp LS(AT_SIGN)  &kp LS(NUMBER_1)    &kp LS(NUMBER_2)        &kp LS(NUMBER_3)         &kp LS(N9)                       &kp BACKSLASH      &kp F11  &kp F2    &kp F3    &kp LC(LS(ESCAPE))
-&trans           &mt LEFT_WIN EQUAL  &trans                  &trans                   &trans         &trans    &trans  &trans                      &mkp MB4  &mkp MB5  &kp LS(F12)
+&kp C_MUTE       &kp LS(N7)          &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &kp EQUAL                     &kp F10            &kp F7   &kp F8    &kp F9    &kp PAGE_UP
+&kp TAB          &kp LS(NUMBER_4)    &kp LS(N5)              &kp LS(NUMBER_6)         &kp LS(N8)                    &kp RIGHT_BRACKET  &kp F4   &kp F5    &kp F6    &kp PAGE_DOWN
+&kp LS(AT_SIGN)  &kp LS(NUMBER_1)    &kp LS(NUMBER_2)        &kp LS(NUMBER_3)         &kp LS(N9)                    &kp BACKSLASH      &kp F11  &kp F2    &kp F3    &kp LC(LS(ESCAPE))
+&trans           &mt LEFT_WIN EQUAL  &trans                  &trans                   &trans      &trans    &trans  &trans                      &mkp MB4  &mkp MB5  &kp LS(F12)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
-        CURSOR {
+        COUSOR {
             bindings = <
-&kp MINUS   &kp N7        &kp N8        &kp N9                     &kp LS(EQUAL)                            &kp INT_YEN              &kp SEMICOLON   &mkp MB3                     &kp COLON        &kp HOME
-&kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6               &kp N0                                   &kp RS(INTERNATIONAL_1)  &mkp MB1        &kp UP_ARROW                 &mkp MB2         &lt 5 END
-&kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3               &kp SLASH                                &kp RS(AT_SIGN)          &kp LEFT_ARROW  &kp DOWN_ARROW               &kp RIGHT_ARROW  &trans
-&trans      &trans        &trans        &mt LEFT_SHIFT LANGUAGE_2  &trans         &kp LANGUAGE_1    &trans  &trans                                   &mt RIGHT_WIN RS(SEMICOLON)  &kp RS(COLON)    &kp DELETE
+&kp MINUS   &kp N7           &kp N8        &kp N9                     &kp LS(EQUAL)                            &kp INT_YEN              &kp SEMICOLON   &mkp MB3                     &kp SQT          &kp HOME
+&kp PERIOD  &kp NUMBER_4     &kp N5        &kp NUMBER_6               &kp N0                                   &kp RS(INTERNATIONAL_1)  &mkp MB1        &kp UP_ARROW                 &mkp MB2         &lt 5 END
+&kp COMMA   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3               &kp SLASH                                &kp RS(AT_SIGN)          &kp LEFT_ARROW  &kp DOWN_ARROW               &kp RIGHT_ARROW  &kp DELETE
+&trans      &kp PRINTSCREEN  &trans        &mt LEFT_SHIFT LANGUAGE_2  &trans         &kp LANGUAGE_1    &trans  &trans                                   &mt RIGHT_WIN RS(SEMICOLON)  &kp RS(SQT)      &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
@@ -139,10 +139,10 @@
 
         SCROLL {
             bindings = <
-&kp MINUS   &kp N7        &kp N8        &kp N9                     &kp LS(EQUAL)                            &kp INT_YEN              &kp SEMICOLON   &mkp MB3                     &kp COLON        &kp HOME
-&kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6               &kp N0                                   &kp RS(INTERNATIONAL_1)  &mkp MB1        &kp UP_ARROW                 &mkp MB2         &kp END
-&kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3               &kp SLASH                                &kp RS(AT_SIGN)          &kp LEFT_ARROW  &kp DOWN_ARROW               &kp RIGHT_ARROW  &trans
-&trans      &trans        &trans        &mt LEFT_SHIFT LANGUAGE_2  &trans         &kp LANGUAGE_1    &trans  &trans                                   &mt RIGHT_WIN RS(SEMICOLON)  &kp RS(COLON)    &kp DELETE
+&kp MINUS   &kp N7           &kp N8        &kp N9                     &kp LS(EQUAL)                            &kp INT_YEN              &kp SEMICOLON   &mkp MB3                     &kp SQT          &kp HOME
+&kp PERIOD  &kp NUMBER_4     &kp N5        &kp NUMBER_6               &kp N0                                   &kp RS(INTERNATIONAL_1)  &mkp MB1        &kp UP_ARROW                 &mkp MB2         &kp END
+&kp COMMA   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3               &kp SLASH                                &kp RS(AT_SIGN)          &kp LEFT_ARROW  &kp DOWN_ARROW               &kp RIGHT_ARROW  &kp DELETE
+&trans      &kp PRINTSCREEN  &trans        &mt LEFT_SHIFT LANGUAGE_2  &trans         &kp LANGUAGE_1    &trans  &trans                                   &mt RIGHT_WIN RS(SEMICOLON)  &kp RS(SQT)      &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
